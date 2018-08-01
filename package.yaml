@@ -1,0 +1,39 @@
+name:                polkadot-vanity
+version:             0.1.0.0
+github:              "akru/polkadot-vanity"
+license:             BSD3
+author:              "Alexander Krupenkin"
+maintainer:          "mail@akru.me"
+copyright:           "(c) Alexander Krupenkin"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/akru/polkadot-vanity#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- random-bytestring
+- base58-bytestring
+- base16-bytestring
+- bytestring
+- pcre-light
+- ed25519
+- blake2
+
+executables:
+  polkadot-vanity:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
