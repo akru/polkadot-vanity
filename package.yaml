@@ -8,7 +8,6 @@ copyright:           "(c) Alexander Krupenkin"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -25,9 +24,10 @@ dependencies:
 - base58-bytestring
 - base16-bytestring
 - bytestring
-- pcre-light
+- parallel
 - ed25519
 - blake2
+- binary
 
 executables:
   polkadot-vanity:
@@ -35,5 +35,6 @@ executables:
     source-dirs:         app
     ghc-options:
     - -threaded
+    - -eventlog
     - -rtsopts
     - -with-rtsopts=-N
